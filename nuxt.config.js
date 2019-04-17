@@ -27,7 +27,7 @@ export default {
   ** Global CSS
   */
   css: [
-    'iview/dist/styles/iview.css'
+    '~/assets/css/index.less'
   ],
 
   router: {
@@ -38,7 +38,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/iview', '~/plugins/i18n.js'
+    '@/plugins/iview', '@/plugins/i18n'
   ],
 
   /*
@@ -70,6 +70,11 @@ export default {
         resourceQuery: /blockType=i18n/,
         loader: '@kazupon/vue-i18n-loader'
       })
+    },
+    loaders: {
+      less: {
+        javascriptEnabled: true
+      }
     }
   }
 }
